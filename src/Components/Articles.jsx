@@ -15,7 +15,13 @@ const Articles = () => {
 
 console.log(articles)
 
+if(articles.length === 0) {
+    return (<section>
 
+        <h3>Latest News:</h3>
+        <h4>...articles loading</h4>
+        </section>)
+}
 
     return(<section>
         <section>
@@ -23,11 +29,14 @@ console.log(articles)
          <h3>Latest News:</h3>
          {articles.map((article) => {
              return (
-                <section key = {article.article_id}>
-                  <h4>{article.author}: {article.title}</h4>
-                  <img alt={`${article.title} cover image`} className="article-image" 
+                <section key = {article.article_id} className='articles-container'>
+                    <div className='articles-box'>
+                  <h4>{article.title}</h4>
+                  <h5>Written by: {article.author}</h5>
+                  <img alt={`${article.title} cover image`} className="articles-img" 
                  src={article.article_img_url}
                   /> 
+                    </div>
              </section>
                  
                  )

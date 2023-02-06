@@ -1,8 +1,12 @@
+import { Link} from "react-router-dom";
+import '../App.css';
 
 const Nav = () => {
-    return ( <section>
+    return ( <section className="nav-bar">
         <header>
-          <h2>NAV STUFF</h2>
+        <Link to='/'>
+        <button className="nav-button">NAV____BAAR BUTTONS TO BE ADDED</button>
+      </Link>
         </header>
       </section>
     )
