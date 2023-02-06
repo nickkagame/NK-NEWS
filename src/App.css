@@ -18,14 +18,14 @@
 
 
 .articles-box{
-  flex-basis: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  flex-basis: 50%; 
   margin-right: 0%;
   box-shadow: 0 0 0 1px black;
   margin-bottom: 10px;
 
 }
 .articles-img{
-
+  text-align: left;
   width: 190px;
   height: 190px;
   margin: auto;
