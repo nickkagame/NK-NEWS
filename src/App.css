@@ -1,15 +1,15 @@
 .App {
-  text-align: center;
+  margin: 30px;
 }
 
 .nav-bar{
   background-color: red;
   display: flex;
   padding: 20px;
+  margin-left: -30px;
 }
 
 .latest-news{
-  margin: 30px;
   width: 95%;
   display: flex;
   flex-wrap: wrap;
@@ -17,12 +17,10 @@
 }
 
 .articles-container{
-  margin: 30px;
   width: 95%;
   display: flex;
   flex-wrap: wrap;
   border-width: 2px;
-  border-style: solid;
 }
 
 
@@ -41,14 +39,12 @@
 
 
 .single-article{
-  margin: 30px
-
 }
 
 .article-container {
   display:grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 110px;
+  /* grid-template-rows: 200px; */
   grid-template-areas: 
   "article-body article-image";
 }
@@ -56,11 +52,18 @@
 .article-body{
   width: 380px;
   height: 380px;
-
+  text-justify: auto;
+  padding-right: 50px;
 }
 
 .article-image{
   width: 380px;
   height: 380px;
 
+}
+
+.comments-window{
+  max-width: 680px;
+  max-height: 380px;
+  text-justify: auto;
 }
