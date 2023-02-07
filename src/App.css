@@ -67,3 +67,7 @@
   max-height: 380px;
   text-justify: auto;
 }
+
+.comment-submitted{
+  color: darkgreen;
+}
