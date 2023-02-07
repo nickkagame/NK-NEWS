@@ -40,7 +40,7 @@ const CommentAdder = ({ article, comments, setComments }) => {
       });
   };
 
-  console.log(usernameInput)
+  
 
   return (
     <section>
