@@ -1,18 +1,26 @@
+
 import Vote from "./Vote";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleById } from "../Utils/Api";
+import { getArticleById, getArticleComments } from "../Utils/Api";
+import { Comments } from "./Comments";
+
 
 const SingleArticle = () => {
   const { id } = useParams();
 
   const [article, setArticle] = useState({});
 
+  const [comments, setComments] = useState([]);
+
   useEffect(() => {
     getArticleById(id).then((articleFromApi) => {
       setArticle(articleFromApi);
     });
   }, []);
+
+
+
 
   return (
     <section>
@@ -28,10 +36,17 @@ const SingleArticle = () => {
           />
         </div>
       </article>
+
       <section>
         <Vote article ={article} />
       </section>
       <section></section>
+
+      <section className= 'comments-window'>
+        
+      <Comments />
+      </section>
+
     </section>
   );
 };
