@@ -16,13 +16,12 @@ export const Comments = () => {
         });
       }, []);
     
-      console.log(comments)
 
     return (
     <section className="comments">
     <h4>Your Comments</h4>
     {comments.map((comment) => { 
-        return(<section> 
+        return(<section key = {comment.comment_id}> 
             <h5>{comment.author} says:</h5>
             <p>{comment.body}</p>
         </section>)
