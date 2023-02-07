@@ -2,7 +2,6 @@
 
 const VotesErrorMsg = ({errorMsg}) => {
     if(errorMsg === ''){
-        console.log(errorMsg)
         return(null)
     } else {
         return (

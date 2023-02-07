@@ -3,7 +3,7 @@ import { patchArticle } from "../Utils/Api";
 import VotesErrorMsg from "./VotesErrorMsg";
 
 const Vote = ({ article }) => {
-  console.log(article);
+
 
   const [votes, setVotes] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
