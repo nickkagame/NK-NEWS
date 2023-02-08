@@ -7,11 +7,7 @@ const Nav = () => {
 
   const [topics, setTopics] = useState([])
   
-//   useEffect(() => {
-//     getArticles().then((articlesFromAPI) => {
-      
-//     })
-// }, [])
+
 
     return ( <section className="nav-bar">
         <header>

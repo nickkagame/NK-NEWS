@@ -49,7 +49,7 @@ const SingleArticle = () => {
       <section></section>
 
       <section className= 'comments-window'>
-      <Comments />
+      <Comments setComments ={setComments} comments = {comments} />
       </section>
 
     </section>

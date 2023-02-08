@@ -3,16 +3,22 @@ import { useParams } from "react-router-dom";
 import { getArticleComments } from "../Utils/Api";
 import "../App.css";
 
-export const Comments = () => {
+export const Comments = ({comments, setComments}) => {
   const { id } = useParams();
 
-  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getArticleComments(id).then((commentsFromApi) => {
       setComments(commentsFromApi);
     });
   }, []);
+
+if(comments.length === 0) { 
+  return (<section>
+    <h4>Your Comments</h4>
+    <h5>...loading</h5>
+  </section>)
+}
 
   return (
     <section className="comments">

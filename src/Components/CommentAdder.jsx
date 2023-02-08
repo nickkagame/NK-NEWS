@@ -29,6 +29,7 @@ const CommentAdder = ({ article, comments, setComments }) => {
     postComment(article.article_id, usernameInput, commentInput)
       .then(({ data }) => {
         setComments((currComments) => {
+          console.log(currComments)
           return [data.commentAdded, ...currComments];
         });
         isSubmitting(false);
