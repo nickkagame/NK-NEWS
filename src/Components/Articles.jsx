@@ -29,7 +29,7 @@ if(articles.length === 0) {
 if(topic) {
    const filteredArticles = articles.filter((article) => article.topic === topic)
    return (<section>
-    <h3 className='latest-news'>Latest News:</h3>
+    <h3 className='latest-news'>{topic} articles:</h3>
     <section className = 'articles-container'>
      {filteredArticles.map((article) => {
          return (
@@ -49,8 +49,6 @@ if(topic) {
     </section>
  </section>)
 }
-
-
 
     return(<section>
         <h3 className='latest-news'>Latest News:</h3>
