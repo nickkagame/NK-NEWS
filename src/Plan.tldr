@@ -2904,8 +2904,8 @@
             "parentId": "page",
             "childIndex": 65,
             "point": [
-              1997.57,
-              480.13
+              1997.87,
+              475.85
             ],
             "rotation": 0,
             "text": "comments: useState([ ])",
@@ -2914,7 +2914,7 @@
               "size": "small",
               "isFilled": false,
               "dash": "draw",
-              "scale": 0.8199447784940842,
+              "scale": 0.6768231202011048,
               "font": "script",
               "textAlign": "middle"
             }

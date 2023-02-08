@@ -39,13 +39,14 @@ const SingleArticle = () => {
       </article>
 
       <section>
+        <Vote article ={article} />
+      </section>
+      <section>
         <CommentAdder setComments ={setComments} comments = {comments} article = {article}/>
       </section>
 
 
-      <section>
-        <Vote article ={article} />
-      </section>
+     
       <section></section>
 
       <section className= 'comments-window'>
