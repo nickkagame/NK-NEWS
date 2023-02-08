@@ -29,3 +29,18 @@ export const getArticleComments = (id) => {
 
     })
 }
+
+export const postComment = (id, usernameInput, commentInput) => { 
+    const commentToAdd = {
+        username: usernameInput,
+        body: commentInput
+      };
+    return newsAPI.post(`/articles/${id}/comments`, {
+        username: usernameInput,
+        body: commentInput
+      }).then((response) => {
+        return response
+    }).catch((err)=> {
+        return Promise.reject((err.response.data.msg))
+    })
+}
