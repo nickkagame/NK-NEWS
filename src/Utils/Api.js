@@ -44,3 +44,9 @@ export const postComment = (id, usernameInput, commentInput) => {
         return Promise.reject((err.response.data.msg))
     })
 }
+export const getTopics = () => { 
+    return newsAPI.get("/topics")
+    .then(({data}) => { 
+        return data.topics
+    })
+}

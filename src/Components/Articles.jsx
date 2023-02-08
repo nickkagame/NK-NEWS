@@ -2,8 +2,12 @@ import {useState, useEffect} from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { getArticles } from '../Utils/Api';
+import { useParams } from "react-router-dom";
 
 const Articles = () => { 
+
+
+    const { topic } = useParams();
 
     const [articles, setArticles] = useState([])
 
@@ -21,6 +25,32 @@ if(articles.length === 0) {
         <h4>...articles loading</h4>
         </section>)
 }
+
+if(topic) {
+   const filteredArticles = articles.filter((article) => article.topic === topic)
+   return (<section>
+    <h3 className='latest-news'>Latest News:</h3>
+    <section className = 'articles-container'>
+     {filteredArticles.map((article) => {
+         return (
+            <Link to ={`/articles/${article.article_id}`} key = {article.article_id}>
+                <div className='articles-box'>
+              <h4>{article.title}</h4>
+              <h5>Written by: {article.author}</h5>
+              <img alt={`${article.title} cover image`} className="articles-img" 
+             src={article.article_img_url}
+              /> 
+                </div>
+         </Link>
+             
+             )
+     })}
+   
+    </section>
+ </section>)
+}
+
+
 
     return(<section>
         <h3 className='latest-news'>Latest News:</h3>
