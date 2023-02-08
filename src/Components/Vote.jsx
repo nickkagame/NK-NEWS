@@ -9,8 +9,6 @@ const Vote = ({ article }) => {
   const [errorMsg, setErrorMsg] = useState("");
 
   const upVote = () => {
-    if (article === {}) {
-    } else {
     article.votes += 1;
     patchArticle(article.article_id)
       .then(({ article }) => {
@@ -20,7 +18,6 @@ const Vote = ({ article }) => {
         const errResponse = err.response.data.msg;
         setErrorMsg("something went wrong");
       });
-    }
   };
 
   return (

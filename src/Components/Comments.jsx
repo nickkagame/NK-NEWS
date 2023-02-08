@@ -16,6 +16,7 @@ export const Comments = () => {
         });
       }, []);
     
+      console.log(comments)
 
     return (
     <section className="comments">
