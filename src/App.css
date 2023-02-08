@@ -9,6 +9,19 @@
   margin-left: -30px;
 }
 
+.nav-button-container{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-button{
+  height: 30px;
+  align-self: center;
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
 .latest-news{
   width: 95%;
   display: flex;
