@@ -2,7 +2,7 @@
 import Vote from "./Vote";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleById, getArticleComments } from "../Utils/Api";
+import { getArticleById } from "../Utils/Api";
 import CommentAdder from "./CommentAdder";
 import { Comments } from "./Comments";
 
@@ -32,7 +32,7 @@ const SingleArticle = () => {
           <p className="article-body">{article.body}</p>
           <img
             className="article-image"
-            alt="an image to accompany the article"
+            alt="to accompany the article"
             src={article.article_img_url}
           />
         </div>
