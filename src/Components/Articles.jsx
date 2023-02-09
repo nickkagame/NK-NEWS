@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
-import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { getArticles } from '../Utils/Api';
 import { useParams } from "react-router-dom";
+import { Sort } from './Sort';
 
 const Articles = () => { 
 
@@ -30,6 +30,7 @@ if(topic) {
    const filteredArticles = articles.filter((article) => article.topic === topic)
    return (<section>
     <h3 className='latest-news'>{topic} articles:</h3>
+    <Sort articles = {articles} setArticles = {setArticles}/>
     <section className = 'articles-container'>
      {filteredArticles.map((article) => {
          return (
@@ -37,7 +38,7 @@ if(topic) {
                 <div className='articles-box'>
               <h4>{article.title}</h4>
               <h5>Written by: {article.author}</h5>
-              <img alt={`${article.title} cover image`} className="articles-img" 
+              <img alt={`${article.title}`} className="articles-img" 
              src={article.article_img_url}
               /> 
                 </div>
@@ -52,6 +53,7 @@ if(topic) {
 
     return(<section>
         <h3 className='latest-news'>Latest News:</h3>
+        <Sort articles = {articles} setArticles = {setArticles}/>
         <section className = 'articles-container'>
          {articles.map((article) => {
              return (
@@ -59,7 +61,7 @@ if(topic) {
                     <div className='articles-box'>
                   <h4>{article.title}</h4>
                   <h5>Written by: {article.author}</h5>
-                  <img alt={`${article.title} cover image`} className="articles-img" 
+                  <img alt={`${article.title}`} className="articles-img" 
                  src={article.article_img_url}
                   /> 
                     </div>
