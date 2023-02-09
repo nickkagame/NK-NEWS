@@ -40,7 +40,10 @@ if(topic) {
               <h5>Written by: {article.author}</h5>
               <img alt={`${article.title}`} className="articles-img" 
              src={article.article_img_url}
-              /> 
+              />
+              <div>
+              <p>likes: {article.votes}   Comments: {article.comment_count}</p> 
+              </div>
                 </div>
          </Link>
              
@@ -64,6 +67,9 @@ if(topic) {
                   <img alt={`${article.title}`} className="articles-img" 
                  src={article.article_img_url}
                   /> 
+                   <div>
+              <p>likes: {article.votes}   Comments: {article.comment_count}</p> 
+              </div>
                     </div>
              </Link>
                  

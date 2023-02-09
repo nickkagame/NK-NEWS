@@ -5,8 +5,12 @@ const newsAPI = axios.create({
 })
 
 export const getArticles = (sortQuery) => {
+    console.log(sortQuery)
     if(sortQuery){
-        return newsAPI.get(`/articles${sortQuery}`)
+        return newsAPI.get(`/articles${sortQuery}`).then(({data})=> {
+            console.log(data.articles)
+            return data.articles
+        })
     }
     return newsAPI.get('/articles').then(({data})=> {
         return data.articles
