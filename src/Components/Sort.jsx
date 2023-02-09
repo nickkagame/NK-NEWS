@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-export const Sort = ({articles, setArticles}) => { 
+export const Sort = ({articles, setArticles, setError}) => { 
     const navigate = useNavigate();
+    
 
 const sortBy = (event) => {
     event.preventDefault() 
@@ -14,6 +15,7 @@ const sortBy = (event) => {
         setArticles(articles)
     }).catch((err)=> {
         console.log(err)
+        setError(true)
     })
 }
 

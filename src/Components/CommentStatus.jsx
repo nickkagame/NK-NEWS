@@ -1,7 +1,7 @@
 
 export const CommentStatus = ({validComment, submitted, commentSubmitting, commentErr, validUsername}) => {
-
-    if(validUsername === false){
+   console.log(validUsername)
+    if(validUsername === false ){
         return<p>
             Please select username
         </p>

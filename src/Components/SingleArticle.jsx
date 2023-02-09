@@ -11,16 +11,26 @@ const SingleArticle = () => {
   const { id } = useParams();
 
   const [article, setArticle] = useState({});
-
+  const [error, setError] = useState(false)
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
     getArticleById(id).then((articleFromApi) => {
       setArticle(articleFromApi);
+    }).catch((err) => {
+      console.log(err)
+      setError(true)
     });
   }, []);
 
+console.log(error)
 
+if(error){
+  return (
+  <section>
+    <h2>Article Not Found</h2>
+  </section>)
+}
 
 
   return (
