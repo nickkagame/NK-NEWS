@@ -4,7 +4,14 @@ const newsAPI = axios.create({
     baseURL: 'https://nk-news.onrender.com/api'
 })
 
-export const getArticles = () => {
+export const getArticles = (sortQuery) => {
+    console.log(sortQuery)
+    if(sortQuery){
+        return newsAPI.get(`/articles${sortQuery}`).then(({data})=> {
+            console.log(data.articles)
+            return data.articles
+        })
+    }
     return newsAPI.get('/articles').then(({data})=> {
         return data.articles
     })
@@ -58,3 +65,4 @@ export const deleteComment = (comment_id) => {
         return response
     })
 }
+
