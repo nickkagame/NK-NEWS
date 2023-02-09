@@ -59,6 +59,8 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
             <option>tickle122</option>
             <option>cooljmessy</option>
             <option>weegembump</option>
+            <option>happyamy2016</option>
+            <option>jessjelly</option>
           </select>
         </label>
         <label className="comment-box-label">
