@@ -2,9 +2,9 @@ import { useState } from "react";
 import { postComment } from "../Utils/Api";
 import { CommentStatus } from "./CommentStatus";
 
-const CommentAdder = ({ article, comments, setComments }) => {
+const CommentAdder = ({ article, comments, setComments, usernameInput, setUsernameInput }) => {
   const [commentInput, setCommentInput] = useState("");
-  const [usernameInput, setUsernameInput] = useState("");
+  
   const [submitted, isSubmitted] = useState(false);
   const [commentSubmitting, isSubmitting] = useState(false);
   const [commentErr, setCommentErr] = useState(false);
