@@ -58,6 +58,3 @@ export const getTopics = () => {
     })
 }
 
-export const sortArticles = () => {
-    return newsAPI.get("/articles")
-}
