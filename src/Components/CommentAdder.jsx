@@ -2,9 +2,9 @@ import { useState } from "react";
 import { postComment } from "../Utils/Api";
 import { CommentStatus } from "./CommentStatus";
 
-const CommentAdder = ({ article, comments, setComments }) => {
+const CommentAdder = ({ article, comments, setComments, usernameInput, setUsernameInput }) => {
   const [commentInput, setCommentInput] = useState("");
-  const [usernameInput, setUsernameInput] = useState("");
+  
   const [submitted, isSubmitted] = useState(false);
   const [commentSubmitting, isSubmitting] = useState(false);
   const [commentErr, setCommentErr] = useState(false);
@@ -59,6 +59,8 @@ const CommentAdder = ({ article, comments, setComments }) => {
             <option>tickle122</option>
             <option>cooljmessy</option>
             <option>weegembump</option>
+            <option>happyamy2016</option>
+            <option>jessjelly</option>
           </select>
         </label>
         <label className="comment-box-label">

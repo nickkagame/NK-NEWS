@@ -11,7 +11,7 @@ const SingleArticle = () => {
   const { id } = useParams();
 
   const [article, setArticle] = useState({});
-
+  const [usernameInput, setUsernameInput] = useState("");
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const SingleArticle = () => {
         <Vote article ={article} />
       </section>
       <section>
-        <CommentAdder setComments ={setComments} comments = {comments} article = {article}/>
+        <CommentAdder setComments ={setComments} comments = {comments} article = {article} usernameInput = {usernameInput} setUsernameInput = {setUsernameInput}/>
       </section>
 
 
@@ -50,7 +50,8 @@ const SingleArticle = () => {
       <section></section>
 
       <section className= 'comments-window'>
-      <Comments setComments ={setComments} comments = {comments} />
+      <Comments setComments ={setComments} comments = {comments} usernameInput = {usernameInput} setUsernameInput = {setUsernameInput}/>
+
       </section>
 
     </section>
