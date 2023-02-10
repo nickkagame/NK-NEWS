@@ -20,8 +20,8 @@ const sortBy = (event) => {
 }
 
 
-    return (<section>
-        <select className="sort-by" onChange={(sortBy)}>
+    return (<section className="sort-by">
+        <select  onChange={(sortBy)}>
             <option value="?sort=">Sort by...</option>
             <option value="?sort=">date (default)</option>
             <option value="?sort=votes">most liked</option>

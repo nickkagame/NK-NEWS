@@ -9,10 +9,13 @@ import ErrorPage from './Components/Error-page-not-found'
 function App() {
   return (
     <section className='App'>
-        <header>
-          <h1>NK NEWS</h1>
-          <Nav/>  
+      <section>
+
+      </section>
+        <header className='NK-header'>
+          <h1 className ="header-text">NK NEWS</h1>
         </header>
+        <Nav/>  
         <Routes>
           <Route path = "/" element={<Articles/>}></Route>
           <Route path = "/articles" element={<Articles/>}></Route>

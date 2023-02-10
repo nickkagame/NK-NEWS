@@ -43,7 +43,7 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
   
 
   return (
-    <section>
+    <section className='postComment'>
       <h3>Post comment</h3>
       <form type="submit" className="comment-form">
         <label className="comment-username-label">

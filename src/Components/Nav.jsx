@@ -17,7 +17,7 @@ useEffect(() => {
     return ( <section className="nav-bar">
         <section className="nav-button-container">
         <Link to='/'>
-        <button className="nav-button">HOME</button>
+        <button className="nav-button">Home</button>
       </Link>
       {topics.map((topic)=> {
         return (<section key={topic.slug}>
