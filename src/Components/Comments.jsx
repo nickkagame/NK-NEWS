@@ -15,7 +15,7 @@ export const Comments = ({ comments, setComments, usernameInput }) => {
     getArticleComments(id).then((commentsFromApi) => {
       setComments(commentsFromApi);
     });
-  }, [isDeleted]);
+  }, [isDeleted, id, setComments]);
 
   if (comments.length === 0) {
     return (

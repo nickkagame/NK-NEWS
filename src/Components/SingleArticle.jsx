@@ -22,9 +22,7 @@ const SingleArticle = () => {
       console.log(err)
       setError(true)
     });
-  }, []);
-
-console.log(error)
+  }, [id]);
 
 if(error){
   return (
