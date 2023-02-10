@@ -48,7 +48,7 @@ if(error){
       </article>
 
       <section>
-        <Vote article ={article} />
+        <Vote article ={article} setArticle={setArticle} />
       </section>
       <section>
         <CommentAdder setComments ={setComments} comments = {comments} article = {article} usernameInput = {usernameInput} setUsernameInput = {setUsernameInput}/>

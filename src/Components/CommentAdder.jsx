@@ -11,8 +11,6 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
   const [validComment, setValidComment] = useState();
   const [validUsername, setValidUsername] = useState();
 
-  console.log(usernameInput)
-
   const commentSubmit = (event) => {
     event.preventDefault();
   

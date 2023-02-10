@@ -2,20 +2,18 @@ import { useState } from "react";
 import { patchArticle } from "../Utils/Api";
 import VotesErrorMsg from "./VotesErrorMsg";
 
-const Vote = ({ article }) => {
+const Vote = ({ article, setArticle }) => {
 
 
-  const [votes, setVotes] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
 
   const upVote = () => {
-    article.votes += 1;
+    let incVotes = article.votes;
+    incVotes++
+    setArticle({...article,
+    votes: incVotes})
     patchArticle(article.article_id)
-      .then(({ article }) => {
-        setVotes(article.votes);
-      })
       .catch((err) => {
-        const errResponse = err.response.data.msg;
         setErrorMsg("something went wrong");
       });
   };
