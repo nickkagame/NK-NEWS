@@ -12,6 +12,7 @@ const SingleArticle = () => {
 
   const [article, setArticle] = useState({});
   const [error, setError] = useState(false)
+  const [usernameInput, setUsernameInput] = useState("");
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ if(error){
         <Vote article ={article} />
       </section>
       <section>
-        <CommentAdder setComments ={setComments} comments = {comments} article = {article}/>
+        <CommentAdder setComments ={setComments} comments = {comments} article = {article} usernameInput = {usernameInput} setUsernameInput = {setUsernameInput}/>
       </section>
 
 
@@ -60,7 +61,8 @@ if(error){
       <section></section>
 
       <section className= 'comments-window'>
-      <Comments setComments ={setComments} comments = {comments} />
+      <Comments setComments ={setComments} comments = {comments} usernameInput = {usernameInput} setUsernameInput = {setUsernameInput}/>
+
       </section>
 
     </section>
