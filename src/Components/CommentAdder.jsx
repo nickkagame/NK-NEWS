@@ -10,7 +10,8 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
   const [commentErr, setCommentErr] = useState(false);
   const [validComment, setValidComment] = useState();
   const [validUsername, setValidUsername] = useState();
-  
+
+  console.log(usernameInput)
 
   const commentSubmit = (event) => {
     event.preventDefault();
@@ -21,10 +22,10 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
     } else if (commentInput.length < 10){
       setValidComment(false)
     }
-    if(usernameInput !== "Username options"){
-      setValidUsername(true)
-    } else {
+    if(usernameInput === "Username options" || validUsername === ''){
       setValidUsername(false)
+    } else {
+      setValidUsername(true)
     }
     postComment(article.article_id, usernameInput, commentInput)
       .then(({ data }) => {

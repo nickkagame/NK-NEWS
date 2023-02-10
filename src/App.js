@@ -5,7 +5,7 @@ import Articles from './Components/Articles';
 import { Route, Routes } from 'react-router-dom';
 import SingleArticle from './Components/SingleArticle.jsx';
 import { Comments } from './Components/Comments';
-
+import ErrorPage from './Components/Error-page-not-found'
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         </header>
         <Routes>
           <Route path = "/" element={<Articles/>}></Route>
+          <Route path = "/articles" element={<Articles/>}></Route>
           <Route path = "/articles/:id" element={<SingleArticle/>}></Route>
           <Route path = "/articles/:id/comments" element={<Comments/>}></Route>
           <Route path = "/articles/topics/:topic" element={<Articles/>}> </Route>
@@ -25,6 +26,7 @@ function App() {
           <Route path = "?sort=comment_count" element={<Articles/>}> </Route>
           <Route path = "?sort=comment_count&order=asc" element={<Articles/>}> </Route>
           <Route path = "?order=asc" element={<Articles/>}> </Route>
+          <Route path = "/*" element={<ErrorPage/>}></Route>
         </Routes>
     </section>
   );
