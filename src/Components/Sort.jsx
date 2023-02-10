@@ -11,7 +11,6 @@ const sortBy = (event) => {
     event.preventDefault() 
     getArticles(event.target.value).then((articles)=>{
         navigate(`${event.target.value}`)
-        console.log(articles)
         setArticles(articles)
     }).catch((err)=> {
         console.log(err)
@@ -21,14 +20,15 @@ const sortBy = (event) => {
 
 
     return (<section className="sort-by">
-        <select  onChange={(sortBy)}>
-            <option value="?sort=">Sort by...</option>
-            <option value="?sort=">date (default)</option>
-            <option value="?sort=votes">most liked</option>
-            <option value="?sort=votes&order=asc">least liked</option>
-            <option value="?sort=comment_count">most commented</option>
-            <option value="?sort=comment_count&order=asc">least commented</option>
-            <option value="?order=asc">date {'(oldest first)'}</option>
+        <select  onChange={(sortBy)}
+        autosize={true}>
+            <option autosize={true} value="?sort=">Sort by...</option>
+            <option  autosize={true} value="?sort=">date (default)</option>
+            <option autosize={true} value="?sort=votes">most liked</option>
+            <option autosize={true} value="?sort=votes&order=asc">least liked</option>
+            <option autosize={true} value="?sort=comment_count">most commented</option>
+            <option autosize={true} value="?sort=comment_count&order=asc">least commented</option>
+            <option autosize={true} value="?order=asc">date {'(oldest first)'}</option>
         </select>
     </section>)
 }

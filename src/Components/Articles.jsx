@@ -66,7 +66,7 @@ const Articles = () => {
                 key={article.article_id}
               >
                 <div className="articles-box">
-                  <h4>{article.title}</h4>
+                  <h4 className="articles-box-header">{article.title}</h4>
                   <h5>Written by: {article.author}</h5>
                   <img
                     alt={`${article.title}`}

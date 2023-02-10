@@ -39,7 +39,9 @@ if(error){
         <h3>Written by {article.author}</h3>
         <div className="article-container">
           <p className="article-body">{article.body}</p>
-          <img
+        </div>
+        <div>
+        <img
             className="article-image"
             alt="to accompany the article"
             src={article.article_img_url}

@@ -43,11 +43,11 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
 
   return (
     <section className='postComment'>
-      <h3>Post comment</h3>
+      <h3>Post a comment</h3>
       <form type="submit" className="comment-form">
         <label className="comment-username-label">
-          Username
-          <select
+          Username:
+          <select className="username-field"
             type="text"
             onChange={(event) => {
               setUsernameInput(event.target.value);
@@ -61,8 +61,9 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
             <option>jessjelly</option>
           </select>
         </label>
+        <section>
         <label className="comment-box-label">
-          Post Comment:
+          Your comment:
           <textarea minLength={10}
             className="comment-box"
             type="text"
@@ -71,7 +72,9 @@ const CommentAdder = ({ article, comments, setComments, usernameInput, setUserna
             }}
           ></textarea>
         </label>
-        <button onClick={commentSubmit}> Post </button>
+        </section>
+        
+        <button className="post-button" onClick={commentSubmit}> Post </button>
         <CommentStatus
           validComment = {validComment}
           validUsername = {validUsername}
